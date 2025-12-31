@@ -1,0 +1,60 @@
+From 6aaf0e15f769026bc8a54eafefc31ccd7c4b1a1e Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Wed, 31 Dec 2025 16:22:57 +0300
+Subject: [PATCH] Fix appdata paper cuts
+
+---
+ build/linux/OpenCloudSaves.desktop                             |  4 +++-
+ build/linux/io.github.daviddesimone.opencloudsaves.appdata.xml | 11 +++--------
+ 2 files changed, 6 insertions(+), 9 deletions(-)
+
+diff --git a/build/linux/OpenCloudSaves.desktop b/build/linux/OpenCloudSaves.desktop
+index e6f4603..a54f66f 100755
+--- a/build/linux/OpenCloudSaves.desktop
++++ b/build/linux/OpenCloudSaves.desktop
+@@ -2,4 +2,6 @@
+ Name=Open Cloud Saves
+ Exec=bootstrap-opencloudsave.sh
+ Type=Application
+-Icon=io.github.daviddesimone.opencloudsaves
+\ No newline at end of file
++Icon=io.github.daviddesimone.opencloudsaves
++Categories=Game;
++Keywords=videogames;saves;cloud;games;
+diff --git a/build/linux/io.github.daviddesimone.opencloudsaves.appdata.xml b/build/linux/io.github.daviddesimone.opencloudsaves.appdata.xml
+index c8416de..0403af4 100644
+--- a/build/linux/io.github.daviddesimone.opencloudsaves.appdata.xml
++++ b/build/linux/io.github.daviddesimone.opencloudsaves.appdata.xml
+@@ -17,12 +17,7 @@
+   <url type="homepage">https://daviddesimone.github.io/OpenCloudSaves/</url>
+   <url type="bugtracker">https://github.com/DavidDeSimone/OpenCloudSaves/issues</url>
+ 
+-  <keywords>
+-    <keyword>videogames</keyword>
+-    <keyword>saves</keyword>
+-    <keyword>cloud</keyword>
+-    <keyword>games</keyword>
+-  </keywords>
++
+   
+   <description>
+     <p>
+@@ -40,7 +35,7 @@
+       Key Features:
+     </p>
+     <p>
+-      1. Inclusion of specific save files based on [pattern matching](https://rclone.org/filtering/) 
++      1. Inclusion of specific save files based on pattern matching
+       2. Customizable save data locations - you can tailor the app to your specific save locations 
+       3. Ability to create new save definitions - you do not need to wait for developers to support cloud saves for their games. 
+       4. Data protection - by default, OpenCloudSave will perform a dry-run before all syncs. This way you can see what changes will be made to your save data before they happen. (You can disable this functionality if you just want to immediately sync)
+@@ -56,4 +51,4 @@
+       <image>https://user-images.githubusercontent.com/7245174/220252565-e639e42f-d993-46c1-b8f2-fe32a0271947.png</image>
+     </screenshot>
+   </screenshots>
+-</component>
+\ No newline at end of file
++</component>
+--
+libgit2 1.7.2
+

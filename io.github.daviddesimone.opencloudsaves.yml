@@ -32,6 +32,9 @@ modules:
         url: https://github.com/DavidDeSimone/OpenCloudSaves
         tag: v0.18.1.1
         commit: d102d27025f1e681d4ea5df331140ac97aece3b7
+      - type: patch
+        path: fix-appdata.patch
+
   - name: rclone
     buildsystem: simple
     build-commands:
